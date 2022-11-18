@@ -1,0 +1,40 @@
+<div class="container">
+    <div>
+        <h2>Add Singer :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Singer</label>
+            <input type="text" [(ngModel)]="newSinger.idSinger" name="idSinger" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>First-Name</label>
+            <input type="text" [(ngModel)]="newSinger.nomSinger" name="nomSinger" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Last-Name</label>
+            <input type="text" [(ngModel)]="newSinger.prenomSinger" name="prenomSinger" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Birth-Date</label>
+            <input type="date" [(ngModel)]="newSinger.dateNSinger" name="dateNSinger" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Band</label>
+            <select class="form-control form-control-lg" id="idBand" name="idBand"
+            [(ngModel)]="newIdBand">
+             <option *ngFor="let band of bands" [value]="band.idBand" >
+             {{band.nomBand}}
+            </option>
+            </select>
+            </div>
+     
+        <div class="mt-2">
+            <button type="submit" (click)="addSinger()" class="btn btn-success">Add</button>
+        </div>
+        <div>
+            <h5>{{message}}</h5>
+        </div>
+    </form>
+</div>

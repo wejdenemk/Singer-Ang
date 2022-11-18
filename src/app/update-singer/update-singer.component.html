@@ -1,0 +1,42 @@
+<div class="container">
+    <div>
+    <h2>update Singer :</h2>
+    </div>
+    <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID Singer</label>
+    <input readonly type="text" [(ngModel)]="currentSinger.idSinger"
+    name="idSinger" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >First-Name</label>
+    <input type="text"[(ngModel)]= "currentSinger.nomSinger"
+    name="nomSinger" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-4">
+    <label >Last-Name</label>
+    <input type="text" [(ngModel)]= "currentSinger.prenomSinger"
+    name="prenomSinger" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+
+        <label >Birth-Date</label>
+<input type="date" [ngModel]="currentSinger.dateNSinger | date: 'yyyy-MM-dd'"
+(ngModelChange)=" currentSinger.dateNSinger= $event" name="dateNSinger"
+ class="form-control">
+</div>
+<div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Band</label>
+    <select class="form-control form-control-lg" id="idBand" name="idBand"
+    [(ngModel)]="updatedBandId">
+    <option *ngFor="let band of bands" [value]="band.idBand" >
+    {{band.nomBand}}
+    </option>
+    </select>
+    </div>
+
+<div class="mt-2">
+<button type="submit" (click)="updateSinger()" class="btn btn-success">update</button>
+</div>
+</form>
+</div>
