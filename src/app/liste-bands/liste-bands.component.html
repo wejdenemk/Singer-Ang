@@ -6,12 +6,13 @@
             </div>
     <table class="table table-striped">
     <thead>
-    <tr> <th>Id</th><th>Nom band</th> </tr>
+    <tr> <th>Id</th><th>Nom band</th><th>Music type</th><th></th></tr>
     </thead>
     <tbody *ngFor="let band of bands">
     <tr>
     <td>{{band.idBand}}</td>
     <td>{{band.nomBand}}</td>
+    <td>{{band.typeMBand}}</td>
     <td><a class="btn btn-success" (click)="updateBand(band)">Editer</a></td>
 
     </tr>

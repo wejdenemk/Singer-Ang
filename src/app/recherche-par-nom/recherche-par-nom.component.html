@@ -1,0 +1,27 @@
+<div class="container">
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2 mt-2 ">
+            <br><br><br><br>
+        <label>Singer's name while taping :  </label>
+        <input class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)">
+        </div>
+        </form>
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <thead>
+   <tr> <th>Id</th><th>First-Name</th> <th>Last-Name</th> <th>Birth-Date</th> <th>Band</th></tr>
+    <tbody *ngFor="let singer of singers">
+    <tr >
+    <td>{{singer.idSinger}}</td>
+    <td>{{singer.nomSinger}}</td>
+    <td>{{singer.prenomSinger}}</td>
+    <td>{{singer.dateNSinger | date:'dd/MM/yyyy'}}</td>
+    <td>{{singer.band.nomBand}}</td>
+   
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            </div>
+            </div>

@@ -29,10 +29,10 @@ export class SingersComponent implements OnInit {
     
     supprimerSinger(s: Singer)
     {
-    let conf = confirm("Etes-vous sûr ?");
+    let conf = confirm("Are you sure?");
     if (conf)
     this.singerService.supprimerSinger(s.idSinger).subscribe(() => {
-    console.log("singer supprimé");
+    console.log("Singer deleted");
     this.chargerSingers();
     });
     } 

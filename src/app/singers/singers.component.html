@@ -14,9 +14,8 @@
     <td>{{singer.band.nomBand}}</td>
    
 
-    <td><a *ngIf="authService.isAdmin()"
-        class="btn btn-danger" (click)="supprimerSinger(singer)">Supprimer</a></td>
-        <td><a *ngIf="authService.isAdmin()" class="btn btnsuccess" [routerLink]="['/updateSinger',singer.idSinger]">Modifier</a></td>
+    <td><a *ngIf="authService.isAdmin()" class="btn btn-danger" (click)="supprimerSinger(singer)">Supprimer</a></td>
+        <td><a *ngIf="authService.isAdmin()" class="btn btn-success" [routerLink]="['/updateSinger',singer.idSinger]">Modifier</a></td>
  
     </tr>
     </tbody>

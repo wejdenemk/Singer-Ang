@@ -11,7 +11,7 @@
 <!-- Links -->
 <ul class="navbar-nav">
 <li class="nav-item">
-<a class="nav-link" routerLink="/singers"  >Home</a>
+<a class="nav-link" routerLink="/singers">Home</a>
 </li>
 <!-- Dropdown -->
 <li class="nav-item dropdown">
@@ -20,10 +20,11 @@ Singers
 </a>
 <div class="dropdown-menu">
     <a *ngIf="authService.isAdmin()" class="dropdown-item"
-    routerLink = "addsinger">Add</a>
-<a class="dropdown-item" href="#">List</a>
+    routerLink = "addsinger">Add Singer</a>
+<a class="dropdown-item" href="#">List Singers</a>
 <a class="dropdown-item" routerLink="/rechercheParBand" >Search by Band</a>
-<a *ngIf="authService.isAdmin()"  class="dropdown-item" routerLink="/listeBands" >Gestion des catégories</a>
+<a class="dropdown-item" routerLink="/rechercheParNom" >Recherche Par Nom</a>
+<a *ngIf="authService.isAdmin()"  class="dropdown-item" routerLink="/listeBands" >Manage Bands</a>
 </div>
 </li> 
 </ul>
@@ -34,8 +35,8 @@ Singers
        Connexion
       </a>
       <div class="dropdown-menu">
-        <a *ngIf="!authService.isloggedIn"  class="dropdown-item" routerLink = "login">login</a>
-        <a *ngIf="authService.isloggedIn" class="dropdown-item" routerLink = "login">logout</a>
+        <a class="dropdown-item" routerLink = "login">login</a>
+        <a  class="dropdown-item" (click) = "onLogout()">logout</a>
         <a class="dropdown-item" href="#">Profile</a>
       </div>
     </li>

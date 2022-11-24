@@ -15,9 +15,7 @@ export class ListeBandsComponent implements OnInit {
   ajout:boolean=true;
 
   updatedBand:Band = {
-    "idBand": 0, "nomBand": "",
-    typeMBand: ''
-  };
+    "idBand": 0, "nomBand": "","typeMBand": ""};
 constructor(private singerService : SingerService) { }
 ngOnInit(): void {
 this.singerService.listeBands().

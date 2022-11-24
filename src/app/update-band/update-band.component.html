@@ -3,11 +3,17 @@
     <label>ID</label>
     <input type="text" [hidden]="ajout"  [(ngModel)]="band.idBand" name="idBand" class="form-control w-25">
     </div>
+    <br>
     <div>
-    <label>Nom </label>
+    <label>Name </label>
     <input type="text" [(ngModel)]="band.nomBand" name="nomBand" class="form-control"
     placeholder="Entrez un nom de catégorie...">
     </div>
+    <br>
+    <label>Music type</label>
+    <input type="text" [(ngModel)]="band.typeMBand" name="typeMBand" class="form-control"
+    placeholder="Entrez un nom de catégorie...">
+
     <div class="mt-2">
     <button type="submit" [disabled]="!band.nomBand" class="btn btn-success" (click)="saveBand()" >{{ajout ? 'Ajouter' : 'Modifier'}}
     </button>

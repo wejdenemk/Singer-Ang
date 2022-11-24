@@ -7,12 +7,14 @@ import { SingersComponent } from './singers/singers.component';
 import { AddSingerComponent } from './add-singer/add-singer.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateSingerComponent } from './update-singer/update-singer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RechercheParBandComponent } from './recherche-par-band/recherche-par-band.component';
 import { ListeBandsComponent } from './liste-bands/liste-bands.component';
 import { UpdateBandComponent } from './update-band/update-band.component';
 import { LoginComponent } from './login/login.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { TokenInterceptor } from './token.interceptor';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 
 
@@ -28,6 +30,7 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
     UpdateBandComponent,
     LoginComponent,
     ForbiddenComponent,
+    RechercheParNomComponent,
   ],
   imports: [
     BrowserModule,

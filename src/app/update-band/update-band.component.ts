@@ -19,7 +19,7 @@ ajout!:boolean;
   constructor() {}
 
   ngOnInit(): void {
-    console.log("ngOnInit du composant UpdateCategorie ",this.band);
+    console.log("ngOnInit du composant UpdateBand ",this.band);
   }
 
   saveBand(){
